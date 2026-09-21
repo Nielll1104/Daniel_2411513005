@@ -1,0 +1,8 @@
+1. Klasifikasi Flynn
+
+    Operasi arr + arr pada NumPy array: SIMD (Single Instruction, Multiple Data)
+        Alasan: NumPy memanfaatkan instruksi vektor pada CPU (seperti AVX/SSE). Satu instruksi penjumlahan dieksekusi secara sejajar terhadap banyak elemen data (vektor/array) dalam satu waktu.
+    Program Python biasa (tanpa threading/multiprocessing) yang membaca file lalu memproses baris demi baris: SISD (Single Instruction, Single Data)
+        Alasan: Program berjalan secara serial pada satu core CPU, mengeksekusi satu aliran instruksi secara berurutan untuk memproses satu data (baris) pada satu waktu.
+    Cluster komputer yang masing-masing node menjalankan simulasi cuaca berbeda untuk wilayah berbeda secara independen: MIMD (Multiple Instruction, Multiple Data)
+        Alasan: Setiap node pada cluster merupakan komputer independen yang mengeksekusi instruksi/kode programnya sendiri terhadap himpunan data wilayahnya masing-masing secara bersamaan.
